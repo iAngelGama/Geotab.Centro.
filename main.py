@@ -8,8 +8,8 @@ from gspread_dataframe import set_with_dataframe
 from google.auth import default
 
 server = "https://my.geotab.com"
-username = "luisangel.martinezgama@mercadolibre.com.mx"
-password = "Atena1980$"
+username = "daira.avilalara@mercadolibre.com.mx"
+password = "DGEM3006"
 database = "melimlm"
 
 RULE_MAP = {
