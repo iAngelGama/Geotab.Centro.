@@ -8,9 +8,9 @@ from gspread_dataframe import set_with_dataframe
 from google.auth import default
 
 server = "https://my.geotab.com"
-username = "daira.avilalara@mercadolibre.com.mx"
-password = "DGEM3006"
-database = "mercadolibre"
+username = "luisangel.martinezgama@mercadolibre.com.mx"
+password = "Atena1980$"
+database = "melimlm"
 
 RULE_MAP = {
     "acD-1ae1xTkODSthI_-zH7A": "Exceso de Velocidad",
@@ -308,3 +308,5 @@ try:
     generate_and_upload_report(start_time, end_time)
 except Exception as e:
     print(f"Error generando o subiendo el reporte: {e}")
+
+
