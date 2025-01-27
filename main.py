@@ -1,5 +1,3 @@
-!pip install --upgrade gspread pandas gspread-dataframe requests pytz
-
 import requests
 import pandas as pd
 from datetime import datetime
@@ -114,7 +112,7 @@ def generate_and_upload_report(start_time, end_time):
     creds, _ = default()
     gc = gspread.authorize(creds)
 
-    spreadsheet_name = "Base Norte"
+    spreadsheet_name = "Base Centro"
     sheet = gc.open(spreadsheet_name)
     worksheet = sheet.worksheet("Geotab+")
 
@@ -159,9 +157,6 @@ try:
     generate_and_upload_report(start_time, end_time)
 except Exception as e:
     print(f"Error generando o subiendo el reporte: {e}")
-
-!pip install --upgrade gspread pandas gspread-dataframe requests pytz
-
 
 server = "https://my.geotab.com"
 username = "daira.avilalara@mercadolibre.com.mx"
@@ -268,7 +263,7 @@ def generate_and_upload_report(start_time, end_time):
     creds, _ = default()
     gc = gspread.authorize(creds)
 
-    spreadsheet_name = "Base Norte"
+    spreadsheet_name = "Base Centro"
     sheet = gc.open(spreadsheet_name)
     worksheet = sheet.worksheet("Geotab+")
 
@@ -313,5 +308,3 @@ try:
     generate_and_upload_report(start_time, end_time)
 except Exception as e:
     print(f"Error generando o subiendo el reporte: {e}")
-
-
