@@ -8,9 +8,9 @@ from gspread_dataframe import set_with_dataframe
 from google.auth import default
 
 server = "https://my.geotab.com"
-username = "luisangel.martinezgama@mercadolibre.com.mx"
-password = "Atena1980$"
-database = "melimlm"
+username = "daira.avilalara@mercadolibre.com.mx"
+password = "DGEM3006"
+database = "mercadolibre"
 
 RULE_MAP = {
     "acD-1ae1xTkODSthI_-zH7A": "Exceso de Velocidad",
