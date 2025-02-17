@@ -8,7 +8,7 @@ from gspread_dataframe import set_with_dataframe
 from google.auth import default
 
 server = "https://my.geotab.com"
-username = "daira.avilalara@mercolibre.com.mx"
+username = "daira.avilalara@mercadolibre.com.mx"
 password = "DGEM3006"
 database = "melimlm"
 
@@ -159,7 +159,7 @@ except Exception as e:
     print(f"Error generando o subiendo el reporte: {e}")
 
 server = "https://my.geotab.com"
-username = "daira.avilalara@mercolibre.com.mx"
+username = "daira.avilalara@mercadolibre.com.mx"
 password = "DGEM3006"
 database = "mercadolibre"
 
