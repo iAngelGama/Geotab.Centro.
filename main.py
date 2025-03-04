@@ -272,6 +272,12 @@ def generate_and_upload_report(start_time, end_time):
 
     set_with_dataframe(worksheet, report_df, row=start_row, include_index=False, include_column_header=(start_row == 1))
     print(f"Reporte subido a Google Sheets desde la fila {start_row} con éxito.")
+    
+def clean_column_a(worksheet):
+    column_a_values = worksheet.col_values(1)
+    cleaned_values = [[value.strip()] for value in column_a_values]
+    worksheet.update("A1:A" + str(len(cleaned_values)), cleaned_values)
+    print("Espacios en la columna A eliminados.")
 
 def fetch_report_data(start_time, end_time):
     credentials = authenticate()
