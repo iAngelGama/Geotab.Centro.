@@ -120,6 +120,12 @@ def generate_and_upload_report(start_time, end_time):
 
     set_with_dataframe(worksheet, report_df, include_index=False, include_column_header=True)
     print("Reporte subido a Google Sheets con éxito.")
+    
+def clean_column_a(worksheet):
+    column_a_values = worksheet.col_values(1)
+    cleaned_values = [[value.rstrip()] for value in column_a_values] 
+    worksheet.update("A1:A" + str(len(cleaned_values)), cleaned_values)
+    print("Espacios finales en la columna A eliminados.")
 
 def fetch_report_data(start_time, end_time):
     credentials = authenticate()
@@ -275,9 +281,9 @@ def generate_and_upload_report(start_time, end_time):
     
 def clean_column_a(worksheet):
     column_a_values = worksheet.col_values(1)
-    cleaned_values = [[value.strip()] for value in column_a_values]
+    cleaned_values = [[value.rstrip()] for value in column_a_values] 
     worksheet.update("A1:A" + str(len(cleaned_values)), cleaned_values)
-    print("Espacios en la columna A eliminados.")
+    print("Espacios finales en la columna A eliminados.")
 
 def fetch_report_data(start_time, end_time):
     credentials = authenticate()
